@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PanTestIssue.MainPage">
+
+    <AbsoluteLayout Background="SkyBlue">
+        <AbsoluteLayout.GestureRecognizers>
+            <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdatedMain"/>
+        </AbsoluteLayout.GestureRecognizers>
+
+        <Grid x:Name="grid" HorizontalOptions="Start" VerticalOptions="Start">
+            <Ellipse WidthRequest="10" HeightRequest="80" Fill="White" 
+                     HorizontalOptions="Start" VerticalOptions="Start" Margin="-5,-40,0,0"/>
+            <Ellipse WidthRequest="80" HeightRequest="10" Fill="White" 
+                     HorizontalOptions="Start" VerticalOptions="Start" Margin="-40,-5,0,0"/>
+
+            <AbsoluteLayout>
+
+                <Rectangle WidthRequest="100" HeightRequest="100" BackgroundColor="Red"
+                       AbsoluteLayout.LayoutBounds="0,0">
+                    <Rectangle.GestureRecognizers>
+                        <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdatedRectangle"/>
+                    </Rectangle.GestureRecognizers>
+                </Rectangle>
+
+                <Rectangle WidthRequest="100" HeightRequest="100" BackgroundColor="Green"
+                       AbsoluteLayout.LayoutBounds="150,0">
+                    <Rectangle.GestureRecognizers>
+                        <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdatedRectangle"/>
+                    </Rectangle.GestureRecognizers>
+                </Rectangle>
+
+                <Rectangle WidthRequest="100" HeightRequest="100" BackgroundColor="Blue"
+                       AbsoluteLayout.LayoutBounds="300,0">
+                    <Rectangle.GestureRecognizers>
+                        <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdatedRectangle"/>
+                    </Rectangle.GestureRecognizers>
+                </Rectangle>
+
+            </AbsoluteLayout>
+        </Grid>
+
+    </AbsoluteLayout>
+
+</ContentPage>
